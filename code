@@ -1,0 +1,23 @@
+                                                                            sorting and searching
+ 2 geeksforgeeks
+"Permute two arrays such that sum of every pair is greater or equal to K"
+Statement:-Given two arrays of equal size n and an integer k. The task is to permute both arrays such that sum of their corresponding 
+element is greater than or equal to k i.e a[i] + b[i] >= k. The task is to print “Yes” if any such permutation exists, otherwise print “No”.
+logic :-1st array sort in ascending order,2nd sort in descending order 
+        sum up l[i]+l1[i]=>k then continue 
+        else break print("no")
+code:-
+l=list(map(int,input().split(' ')))
+l1=list(map(int,input().split(' ')))
+k=int(input())
+l.sort()
+l1.sort(reverse=True)
+f=0
+for i in l:
+    if l[i]+l1[i]!=k:
+        f=1
+        break
+if f==1:
+    print("no")
+else:
+    print("yes")
